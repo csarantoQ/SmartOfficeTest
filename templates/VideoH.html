@@ -1,0 +1,19 @@
+{% extends "HeaderH.html" %}
+{% block body %}
+<div style="margin-top:100px">
+  	<p>
+    	<h2>Video from File</h2>
+  	</p>
+  	<video width="640" controls autoplay>
+  		<source src="{{ url_for('static', filename='videos/bunny.webm') }}">
+		Your browser does not support the video tag.
+	</video>
+  	<p>
+    	<h2>Video From Internet (and somewhat interesting)</h2>
+  	</p>
+
+		<iframe width="420" height="315" src="https://www.youtube.com/embed/dTp6d7Bw79A" frameborder="0" allowfullscreen></iframe>
+
+  	</iframe>
+ </div>
+{% endblock %}

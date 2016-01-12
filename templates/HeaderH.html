@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--not necessary to indent in html but we keep python standards-->
+	<head>
+		<meta charset="utf-8">
+		<title>Harry'spot</title>
+		<!--incurages browser to use full size of window-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--reference to style sheet-->
+		<!--set variable for our css url_for(folder, file)-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<!--reference to icon for webpage-->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='qualogy.ico') }}">
+	</head>
+
+
+<header>
+	<div class="navbar-header">
+      	<a class="navbar-brand" href="/">
+      		<img style="max-width:100px; margin-top: 0px" src="{{ url_for('static', filename='images/qualogy_logo.png') }}">
+      	</a>
+    </div>
+    <div class="contaier-fuid">
+
+    	<a href="/">
+    		<button type="button" class="btn btn-danger" aria-label="Left Align" style="margin-top: 30px; margin-bottom:5px; height: 44px; margin-right: 15px" >
+				<span class="glyphicon glyphicon-home" aria-hidden="true">
+			</span> HOME
+			</button>
+		</a>
+
+		<a href="/video">
+			<button type="button" class="btn btn-danger" aria-label="Left Align" style="margin-top: 30px; margin-bottom:5px; height: 44px; margin-right: 15px" >
+				<span class="	glyphicon glyphicon-sound-stereo" aria-hidden="true"> </span> VIDEO
+			</button>
+		</a>
+
+		<a href="/viewer">
+			<button type="button" class="btn btn-danger" aria-label="Left Align" style="margin-top: 30px; margin-bottom:5px; height: 44px; margin-right: 15px" >
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span> VIEWER
+			</button>
+		</a>
+
+		<a href="/devs">
+			<button type="button" class="btn btn-danger" aria-label="Left Align" style="margin-top: 30px; margin-bottom:5px; height: 44px; margin-right: 15px" >
+				<span class="glyphicon glyphicon-console" aria-hidden="true"></span> DEVELOPER
+			</button>
+		</a>
+
+	</div>
+</header>
+
+<body>
+	<div class="container-fluid" align="center" style="min-height:100%">
+	{% block body %} {% endblock %}
+	</div>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>
